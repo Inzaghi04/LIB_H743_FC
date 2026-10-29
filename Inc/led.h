@@ -1,8 +1,8 @@
 #ifndef LED_H
 #define LED_H
 
-#include <stdio.h>
 #include <stdbool.h>
+#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -11,7 +11,7 @@ extern "C" {
 typedef enum
 {
     LED_OK = 0,
-    LED_ERR,
+    LED_ERR
 } led_stat_t;
 
 typedef void (*led_write_fn)(void *port, bool level);
@@ -41,4 +41,4 @@ bool led_is_on(const led_t *led);
 #endif
 
 
-#endif
+#endif /* LED_H */
